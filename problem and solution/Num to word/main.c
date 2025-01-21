@@ -3,9 +3,9 @@
 
 int main()
 {
-    int n,i,rem=0,rem2=0,y,x,rev=0,count=0,sum=1;
+    long long n,rem=0,rem2=0,a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,i=0,y,x,rev=0,count=0,sum=1;
     printf("Enter Digit: ");
-    scanf("%d",&n);
+    scanf("%lld",&n);
 
     while(n>0){
         rem=n%10;
@@ -22,38 +22,47 @@ int main()
             printf("Zero ");
             break;
         case 1:
-            printf("One ");
+            a++;
             break;
 
         case 2:
-            printf("Two ");
+            b++;
             break;
 
         case 3:
-            printf("Three ");
+            c++;
             break;
 
         case 4:
-            printf("Four ");
+            d++;
             break;
         case 5:
-            printf("Five ");
+            e++;
             break;
         case 6:
-            printf("Six ");
+            f++;
             break;
         case 7:
-            printf("Seven ");
+            g++;
             break;
         case 8:
-            printf("Eight ");
+            h++;
             break;
         default:
-            printf("Nine ");
+            i++;
             break;
         }
 
     }
+    printf("1 = %lld\n",a);
+    printf("2 = %lld\n",b);
+    printf("3 = %lld\n",c);
+    printf("4 = %lld\n",d);
+    printf("5 = %lld\n",e);
+    printf("6 = %lld\n",f);
+    printf("7 = %lld\n",g);
+    printf("8 = %lld\n",h);
+    printf("9 = %lld\n",i);
 
 
 

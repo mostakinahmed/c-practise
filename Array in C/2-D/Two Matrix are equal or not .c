@@ -38,7 +38,7 @@ int main() {
       printf("\n");
       
       //print matrix B
-    printf("\nMatrix A:\n");
+    printf("\nMatrix B:\n");
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
              printf("%d ",b[i][j]);

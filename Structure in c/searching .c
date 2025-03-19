@@ -26,13 +26,35 @@ int main() {
          fgets(student[i].dep, sizeof(student[i].dep), stdin);
     }
 
-    printf("\nStudent Information: \n");
-     for(int i=0;i<n;i++){
-         printf("ID: %d\n",student[i].id);
-         printf("Name: %s",student[i].name);
-         printf("Course: %s",student[i].course);
-         printf("Dep: %s",student[i].dep);
+    // printf("\nStudent Information: \n");
+    //  for(int i=0;i<n;i++){
+    //      printf("ID: %d\n",student[i].id);
+    //      printf("Name: %s",student[i].name);
+    //      printf("Course: %s",student[i].course);
+    //      printf("Dep: %s",student[i].dep);
+    //      printf("\n");
+    // }
+    
+    
+     printf("\n");
+    //serching by id
+    int x;
+    printf("Search ID:");
+    scanf("%d",&x);
+    while(x!=0){
+        for(int i=0;i<n;i++){
+         if(student[i].id==x){
+             printf("ID: %d\n",student[i].id);
+             printf("Name: %s",student[i].name);
+             printf("Course: %s",student[i].course);
+             printf("Dep: %s",student[i].dep);
+             printf("\n");
+         }
+       }
+       printf("Search ID:");
+       scanf("%d",&x);
     }
+    
 
     
     //printf("Try programiz.pro");

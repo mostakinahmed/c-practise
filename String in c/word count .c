@@ -8,7 +8,7 @@ int main() {
 
     // Use fgets instead of gets
     printf("Enter a string: ");
-    fgets(str, sizeof(str, stdin);
+    fgets(str, sizeof(str), stdin);
 
     for (i = 0; str[i] != '\0'; i++) {
         if (str[i] == ' ' || str[i] == '\n') {

@@ -32,8 +32,8 @@ void main() {
     int rSum=0;
     int cSum=0;
     for(int i=0;i<n;i++){
-        rSum= rSum+data[i][n/2];
-        cSum=cSum+data[n/2][i];
+        rSum= rSum+data[n/2][i];
+        cSum=cSum+data[i][n/2];
         
       }
       printf("\n");

@@ -7,7 +7,7 @@ int main()
     gets(data1);
     gets(data2);
 
-    //find size of second data
+    //find size of first data
     int size1 = 0;
     while (data1[size1] != '\0') {
         size1++;

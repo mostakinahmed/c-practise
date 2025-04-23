@@ -7,6 +7,7 @@ int main()
     gets(data1);
     gets(data2);
 
+
     //find size of first data
     int size1 = 0;
     while (data1[size1] != '\0') {
@@ -27,6 +28,7 @@ int main()
         i++;
     }
 
+    //find final size
     int finalSize=0;
     while (data1[finalSize] != '\0') {
         finalSize++;
@@ -35,6 +37,5 @@ int main()
     // Output
     printf("\n%s", data1);
     printf("\nSize of Final string: %d", finalSize);
-
     return 0;
 }

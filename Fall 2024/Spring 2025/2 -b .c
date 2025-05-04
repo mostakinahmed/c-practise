@@ -33,7 +33,7 @@ int main()
     scanf("%d", &n);
 
     // call function and pass n.
-    // function return result store into result variable ( true = 1, false = 0 )
+    // function return the result & store it into result variable ( true = 1, false = 0 )
     result = isPrime(n);
     if (result == 1)
     {

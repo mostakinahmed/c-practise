@@ -29,9 +29,9 @@ int main() {
 
     //print max
     printf("\nAthlete of most medal:\n");
-    printf("Title: %s", athlete[max].name);
-    printf("Author: %s", athlete[max].sport);
-    printf("Price: %d\n",athlete[max].medal);
+    printf("Name: %s", athlete[max].name);
+    printf("Sport: %s", athlete[max].sport);
+    printf("Medal: %d\n",athlete[max].medal);
 
     return 0;
 }

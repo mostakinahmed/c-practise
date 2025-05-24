@@ -1,47 +1,45 @@
-// Online C compiler to run C program online
 #include <stdio.h>
 
-struct apartment{
+struct apartment {
     int apNum;
     float apSQFeet;
     int rent;
 };
 
-
 int main() {
-    struct apartment apartment[5];
+    struct apartment apartment[4];
     float rentPerSQ[4];
     int max = 0;
 
-  //take input 
-    for(int i=0;i<4;i++){
-        printf("%d Athlete:\n",i+1);
-        printf("Apartment num: ");
-        scanf("%d",&apartment[i].apNum);
-        printf("Square feet: ");
-        scanf("%f",&apartment[i].apSQFeet);
-        printf("Rent: ");
-        scanf("%d",&apartment[i].rent);
-        
-    }
-    
-    //find all rent per sq feet
+    // Take input
     for(int i = 0; i < 4; i++) {
-         rentPerSQ[i]=apartment[i].apSQFeet/apartment[i].rent;
+        printf("%d Apartment:\n", i + 1);
+        printf("Apartment num: ");
+        scanf("%d", &apartment[i].apNum);
+        printf("Square feet: ");
+        scanf("%f", &apartment[i].apSQFeet);
+        printf("Rent: ");
+        scanf("%d", &apartment[i].rent);
     }
-    
-    //cheak max 
+
+    // Calculate rent per square foot
+    for(int i = 0; i < 4; i++) {
+        rentPerSQ[i] = apartment[i].rent / apartment[i].apSQFeet;
+    }
+
+    // Find max rent per square foot
     for(int i = 1; i < 4; i++) {
         if(rentPerSQ[i] > rentPerSQ[max]) {
-            max= i;
+            max = i;
         }
     }
 
-    //print max
-    printf("\nApartment of highest rent per sq feet:\n");
+    // Print apartment with highest rent per square foot
+    printf("\nApartment with the highest rent per square foot:\n");
     printf("Apartment num: %d\n", apartment[max].apNum);
-    printf("Square feet: %f\n", apartment[max].apSQFeet);
-    printf("rent: %d\n",apartment[max].rent);
+    printf("Square foot: %.2f\n", apartment[max].apSQFeet);
+    printf("Rent: %d\n", apartment[max].rent);
+    printf("Rent per square foot: %.2f\n", rentPerSQ[max]);
 
-    return 0;
+    return 0;
 }

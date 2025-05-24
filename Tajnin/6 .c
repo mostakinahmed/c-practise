@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 struct movie{
     char title[30];

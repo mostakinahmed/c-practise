@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 struct athlete{
     char name[30];
@@ -9,6 +10,8 @@ struct athlete{
 int main() {
     struct athlete athlete[5];
     int max = 0;
+
+    //take input
     for(int i=0;i<5;i++){
         printf("%d Athlete:\n",i+1);
         printf("Name: ");

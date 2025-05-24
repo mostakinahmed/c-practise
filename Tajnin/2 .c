@@ -11,6 +11,8 @@ int main() {
     struct book book[3];
     int max = 0;
     int min = 0;
+
+    //take input
     for(int i=0;i<3;i++){
         printf("%d Book:\n",i+1);
         printf("Title: ");

@@ -16,7 +16,7 @@ int main() {
     //make all uppercase
      printf("Uppercase word list:\n");
     for(int i = 0; i < n; i++) {
-        for(int j = 0; words[i][j] != '\0';j++) {//count word size
+        for(int j = 0; words[i][j] != '\0';j++) {
            if (words[i][j] >= 'a' && words[i][j] <= 'z') {
             words[i][j] = words[i][j] - 32;  // Convert to uppercase
             }

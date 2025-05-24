@@ -1,45 +1,40 @@
 #include <stdio.h>
+#include <string.h>
 
-struct apartment {
-    int apNum;
-    float apSQFeet;
-    int rent;
+struct movie{
+    char title[30];
+    char director[30];
+    int rYear;
 };
 
 int main() {
-    struct apartment apartment[4];
-    float rentPerSQ[4];
-    int max = 0;
-
-    // Take input
-    for(int i = 0; i < 4; i++) {
-        printf("%d Apartment:\n", i + 1);
-        printf("Apartment num: ");
-        scanf("%d", &apartment[i].apNum);
-        printf("Square feet: ");
-        scanf("%f", &apartment[i].apSQFeet);
-        printf("Rent: ");
-        scanf("%d", &apartment[i].rent);
+    struct movie movie[3];
+    int old = 0;
+    
+    //take three input
+    for(int i=0;i<3;i++){
+        printf("%d Movie:\n",i+1);
+        printf("Title: ");
+        fgets(movie[i].title,sizeof(movie[i].title),stdin);
+        printf("Author: ");
+        fgets(movie[i].director,sizeof(movie[i].director),stdin);
+        printf("Release Year: ");
+        scanf("%d",&movie[i].rYear);
+        getchar();
     }
-
-    // Calculate rent per square foot
-    for(int i = 0; i < 4; i++) {
-        rentPerSQ[i] = apartment[i].rent / apartment[i].apSQFeet;
-    }
-
-    // Find max rent per square foot
-    for(int i = 1; i < 4; i++) {
-        if(rentPerSQ[i] > rentPerSQ[max]) {
-            max = i;
+    
+    //cheak oldest movie 
+    for(int i = 1; i < 3; i++) {
+        if(movie[i].rYear < movie[old].rYear) {
+            old= i; 
         }
     }
 
-    // Print apartment with highest rent per square foot
-    printf("\nApartment with the highest rent per square foot:\n");
-    printf("Apartment num: %d\n", apartment[max].apNum);
-    printf("Square foot: %.2f\n", apartment[max].apSQFeet);
-    printf("Rent: %d\n", apartment[max].rent);
-    printf("Rent per square foot: %.2f\n", rentPerSQ[max]);
+    //print old movie
+    printf("\nOldest movie details:\n");
+    printf("Title: %s", movie[old].title);
+    printf("Director: %s", movie[old].director);
+    printf("Release Year: %d\n", movie[old].rYear);
 
     return 0;
 }

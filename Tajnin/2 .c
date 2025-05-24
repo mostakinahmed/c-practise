@@ -1,6 +1,5 @@
-// Online C compiler to run C program online
 #include <stdio.h>
-
+#include <string.h>
 struct book{
     char title[30];
     char author[30];

@@ -11,7 +11,7 @@ struct student{
 int main() {
     // Write C code here
   
-        struct student mostakin,tonmoy;
+        struct student mostakin;
         //user input
         printf("Enter ID: ");
         scanf("%d",&mostakin.id);

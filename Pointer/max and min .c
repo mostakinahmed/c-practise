@@ -13,6 +13,7 @@ int main()
         scanf("%d", &data[i]);
     }
 
+    //max and min
     int max = *ptr;
     int min = *ptr;
     for (int i = 1; i < n; i++)

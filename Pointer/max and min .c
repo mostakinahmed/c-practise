@@ -31,6 +31,7 @@ int main()
         }
     }
 
+    //output
     printf("max = %d\n", max);
     printf("min = %d", min);
     return 0;
